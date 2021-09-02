@@ -1,0 +1,17 @@
+extends layout
+
+block contenido
+      section.contenido
+        .container
+            .form__top
+                h2 EQUIPOS INSCRIPTOS 
+                .listado-pendientes
+                    ul
+                        table
+                            if(equipo)
+                                each lista in equipo
+                                    tr
+                                       td  
+                                            a(href=`/equipos/${lista.url}`)= lista.nombre
+        //pre= vardump(equipo)
+            

@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+  // Basic
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    // Mobile Metas
+    meta(name='viewport', content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    // Site Icons
+    link(rel='shortcut icon', href='', type='image/x-icon')
+    link(rel='apple-touch-icon', href='')
+    link(rel='stylesheet', href='../css/login.css')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='/css/bootstrap.min.css')
+    // Site CSS
+    link(rel='stylesheet', href='/style.css')
+    link(rel='stylesheet', href='/css/3dslider.css')
+    title=nombrePagina
+    script(src='http://code.jquery.com/jquery-1.11.1.min.js')
+  body.game_info(data-spy='scroll', data-target='.header')
+    if error
+      p.alert-danger.text-center.error= error
+    .login-box
+      img.avatar(src='/images/logofedssport.png', alt='Avatar Image')
+      h1 Iniciar Sesión
+      form.form-signin(action="/login", method='POST')
+        label(for='email') Email
+        input(type='email', name='email', placeholder='Correo Electrónico' value=email)
+        br
+        label(for='contrasenia') Contraseña
+        input(type='password', name='password', placeholder='Contraseña' value=password)
+        input#btn_ingresar(type='submit', value='Ingresar')
+      
+        
+        a(href='/registro') Registrarse
+        br
+        a(href='/restablecer') ¿Olvidaste tu contraseña?
+        br
+      
+    script(src='/jquery/jquery-2.1.1.js')
+    script(src='/js/funciones.js')
+
+    block contenido

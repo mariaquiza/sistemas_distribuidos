@@ -1,0 +1,11 @@
+extends layout
+
+include mixins/crearEquipo
+
+block contenido
+      section.contenido
+        .container
+            .form__top
+                h2=nombrePagina
+                +crearEquipo(equipo)
+            

@@ -1,0 +1,109 @@
+doctype html
+html(lang='en')
+  // Basic
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    // Mobile Metas
+    meta(name='viewport', content='width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no')
+    // Site Metas
+    title=nombrePagina
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    // Site Icons
+    link(rel='shortcut icon', href='', type='image/x-icon')
+    link(rel='apple-touch-icon', href='')
+    // Bootstrap CSS
+    link(rel='stylesheet', href='css/bootstrap.min.css')
+    // Site CSS
+    link(rel='stylesheet', href='style.css')
+    // Responsive CSS
+    link(rel='stylesheet', href='css/responsive.css')
+    // Custom CSS
+    link(rel='stylesheet', href='css/custom.css')
+    // font family
+    link(href='https://fonts.googleapis.com/css?family=Poppins:100,100i,20ç0,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i', rel='stylesheet')
+    // end font family
+    link(rel='stylesheet', href='css/3dslider.css')
+    script(src='http://code.jquery.com/jquery-1.11.1.min.js')
+    script(src='js/3dslider.js')
+  body.game_info(data-spy='scroll', data-target='.header')
+    section#top
+      header
+        .container
+          .header-top
+            .row
+              .col-md-6
+                .full
+                  .logo
+                    a(href='index.html')
+                      img(src='images/logofedssport.png', alt='#')
+              .col-md-6
+                .right_top_section
+                  // button section
+                  ul.login
+                    li.login-modal
+                      a.login(href='/login')
+                        i.fa.fa-user
+                        | Login
+                  // end button section
+          .header-bottom
+            .row
+              .col-md-12
+                .full
+                  div
+                    div
+                      nav
+                        .navbar-header
+                          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.js-navbar-collapse')
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+                          // End Item
+                          .item
+                            .banner-for-match
+                              a(href='#')
+                                img.img-responsive(src='images/match-banner1.jpg', alt='#')
+                          // End Item
+                          .item
+                            .banner-for-match
+                              a(href='#')
+                                img.img-responsive(src='images/match-banner1.jpg', alt='#')
+                          // End Item
+                          // End Carousel Inner
+                          // Controls
+                          a.left.carousel-control(href='#menCollection', role='button', data-slide='prev')
+                          a.right.carousel-control(href='#menCollection', role='button', data-slide='next')
+                    // /.carousel
+                    // /.nav-collapse
+      .full-slider
+        #carousel-example-generic.carousel.slide
+          // Wrapper for slides
+          .carousel-inner(role='listbox')
+            // First slide
+            .item.active.skyblue(data-ride='carousel', data-interval='5000')
+              .carousel-caption
+                .col-lg-7.col-md-7.col-sm-12.col-xs-12
+                .col-lg-5.col-md-5.col-sm-12.col-xs-12
+                  .slider-contant(data-animation='animated fadeInRight')
+                    h3
+                      | Bienvenidos FedsSport
+                      br
+                      | Si no practicas
+                      span.color-yellow No te mereces
+                      br
+                      | ¡Ganar!
+                    p
+                      | Estoy arrepentido del 99% de todo lo que hice en mi vida, 
+                      br
+                      |                                  pero el 1% que es el fútbol salva el resto (Maradona)
+            // Controls
+            a.left.carousel-control(href='#carousel-example-generic', role='button', data-slide='prev')
+              span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+              span.sr-only Previous
+            a.right.carousel-control(href='#carousel-example-generic', role='button', data-slide='next')
+              span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+              span.sr-only Next
+    block contenido

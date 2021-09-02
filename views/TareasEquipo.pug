@@ -1,0 +1,46 @@
+extends layout
+
+block contenido
+      section.contenido
+        .container
+            .form__top
+                h2 #{nombrePagina} - #{equipo.nombre}
+                //fromulario jugador
+                h2 Registro Jugadores
+            form.form__reg(action=`/equipos/${equipo.url}` method="POST")
+                input.input(type="text" id="nombre" name="nombre" placeholder=" 👤 Nombre" required pattern="[A-Za-z]+" autofocus)
+                input.input(type="text" id="apellido" name="apellido" placeholder=" Apellido" required pattern="[A-Za-z]+" autofocus)
+                select.input(name='tipodocumento' id='tipodocumento' required)
+                    option(value="") Tipo de Identificación 
+                    option(value="CC") Cédula de Cuidadanía 
+                    option(value="pasaporte") Pasaporte 
+                    option(value="registro civil") Registro Civil 
+                    option(value="tarjeta identidad") Tarjeta Identidad 
+                input.input(type="number" id="numeroidentificacion" name="numeroidentificacion" placeholder="Número Identificacion" required autofocus)
+                input.input(type="number" id="telefono" name="telefono" placeholder=" Telefono" required autofocus)
+                input.input(type="email" id="email" name="email" placeholder=" example:lorena@gmail.com" required autofocus)
+                .btn__form
+                  input.btn__submit(type="submit" value="Registrar")
+                //Tareas Pendientes
+            .listado-pendientes
+              ul
+                if jugador.length
+                  each lista in jugador
+                    li.lista(data-jugador=lista.id)
+                      p=lista.nombre
+                      .acciones
+                        if lista.estado
+                          i.far.fa-check-circle.completo
+                        else
+                          i.far.fa-check-circle
+                        //i.fas.fa-user-edit
+                        i.fas.fa-trash       
+                else
+                  p No hay Jugadores asignados a Equipo!
+            //pre= vardump(jugador)
+            // acciones
+            .btn__form
+              .btn__submit
+                a(href=`/equipo/editar/${equipo.id}` class="boton") Editar 
+              button#eliminar-equipo(data-equipo-url=equipo.url type="button" class="btn__reset") Eliminar 
+

@@ -1,0 +1,23 @@
+mixin crearEquipo(equipo = {})
+
+    form.form__reg(action=`/FrmEquipo/${equipo.id || ''}` method="POST")
+                input.input(type="text" value=equipo.nombre id="nombre" name="nombre" placeholder=" 👤 Nombre" required  autofocus)
+                label
+                | Tipo De Torneo:
+                input(id="HdTipoTorneo" type="hidden" value=equipo.tipotorneo)
+                select.input(name='tipotorneo' id='tipotorneo' required )
+                    option(value="") Seleccione
+                    option(value="Privado") Privado
+                    option(value="Junior") junior
+                    option(value="Juvenil") juvenil
+                label
+                | Tipo De Equipo:
+                input(id="HdTipoEquipo" type="hidden" value=equipo.tipoequipo)
+                select.input(name='tipoequipo' id="tipoequipo" required)
+                    option(value="") Seleccione
+                    option(value="Local") Local
+                    option(value="Visitante") Visitante
+                .btn__form
+                    input.btn__submit(type="submit" value=`${equipo.nombre ? 'Guardar': 'Registrar'}`)
+
+    script(src="/js/selectEquipo.js")

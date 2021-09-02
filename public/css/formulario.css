@@ -1,0 +1,130 @@
+html {
+	font-size: 16px;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+	background-image: linear-gradient(
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+	url('../images/about.jpeg');
+}
+
+.container {
+	max-width: 570px;
+	height: auto;
+	background-color: #EFEFEF;
+	margin: 5% auto;
+	padding-bottom: 1rem;
+
+}
+
+.form__top{
+	width: 100%;
+	text-align: center;
+	padding: 2rem 0 1rem;
+	border-top: solid .4rem #F39B53;
+	margin-bottom: 1rem;
+}
+
+.form__top h2 {
+	font-weight: bold;
+	color:black;
+	font-size: 18px;
+}
+
+h2 span {
+	color: #F39B53;
+}
+
+.form__reg {
+	padding: 0 3rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.btn__form {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 1rem;
+}
+
+.input, .btn__submit, .btn__reset{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+}
+.button, .btn__submit, .btn__reset{
+	background-color: #EFEFEF;
+	padding: .5rem;
+	margin: .5rem 0;
+	border: none;
+	border-bottom: solid #C8C8C8 .2rem;
+	transition: all .5s;
+}
+
+.input:focus {
+	border-bottom: solid #F39B53 .2rem;
+}
+
+.btn__submit, .btn__reset {
+	width: 19%;
+	border-bottom: none;
+	border-radius: 8px;
+	background-color: #31B1E5;
+	color: white;
+}
+
+.btn__reset {
+	background-color: #EDA135;
+}
+
+.btn__submit:hover {
+	background-color: #4C9ED9;
+	text-decoration: none;
+}
+
+.btn__reset:hover{
+	background-color: #FA9535;
+}
+.btn__submit .boton:first-of-type{
+	color: white;
+    text-decoration: none;
+}
+/** Listado */
+
+.listado-pendientes {
+    background-color: #F2F2F2;
+    max-width: 800px;
+    width: 68%;
+    margin: 2rem auto 0 auto;
+    padding: 3rem;
+    border: 1px solid #FA9535;
+}
+.listado-pendientes ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    border-bottom: 1px solid #FA9535;
+}
+.listado-pendientes ul li:last-of-type {
+    border-bottom: none;
+}
+.listado-pendientes ul li i {
+    cursor: pointer;
+}
+.acciones i:last-child{
+    margin-left: 3rem;
+}
+.completo {
+    color: #FA9535;
+}
+a { color:#4C9ED9;
+	text-decoration: none;}
+

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(type="text/css" rel="stylesheet" href="/css/formulario.css")
+        link(type="text/css" rel="stylesheet" href="/css/login.css")
+        link(type="text/css" rel="stylesheet" href="/css/reset.css")
+        link(type="text/css" rel="stylesheet" href="/css/menu.css")
+        script(src='https://kit.fontawesome.com/8e583055fe.js' crossorigin='anonymous')
+        title=nombrePagina
+    body
+        header.header2
+            .wrapper
+                .logo
+                    img.img(src="/images/logofedssport.png")
+                nav
+                    a(href="/menu") Inicio
+                    //a(href="/FrmTorneo") Torneo
+                    a(href="/FrmEquipo") Equipo
+                    //a(href="/FrmJugador") Jugador
+                    a(href="/cerrar-sesion") Cerrar Sesiòn
+        block contenido
+    script(src="/dist/bundle.js")
